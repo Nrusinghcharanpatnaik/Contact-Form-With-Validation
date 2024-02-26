@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="contact.css" />
+    <link rel="stylesheet" type="text/css" href="common.css" />
+    <title>Contact Form</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <h1>Contact Form</h1>
+    </header>
+    <div id="wrapper">
+      <div id="form-error"></div>
+      <div id="contact-form-container">
+        <form id="contactForm">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+            <div id="name-error" class="error-container"></div>
+          </div>
+
+          <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" />
+            <div id="email-error" class="error-container"></div>
+          </div>
+
+          <div>
+            <label>Sex:</label>
+            <div id="sex-container">
+              <label><input type="radio" name="sex" value="male" /> Male</label>
+              <label
+                ><input type="radio" name="sex" value="female" /> Female</label
+              >
+            </div>
+            <div id="sex-error" class="error-container"></div>
+          </div>
+
+          <div>
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" min="10" max="99" />
+            <div id="age-error" class="age-error-container"></div>
+          </div>
+
+          <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <div id="message-error" class="error-container"></div>
+          </div>
+
+          <div class="button-container">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="footer-container">
+      <p>&copy; 2023 Contact Form. All rights reserved.</p>
+    </footer>
+
+    <script src="validation.js"></script>
+  </body>
+</html>

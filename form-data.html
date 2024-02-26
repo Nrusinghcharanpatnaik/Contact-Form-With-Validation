@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Data</title>
+    <link rel="stylesheet" type="text/css" href="form.css" />
+    <link rel="stylesheet" type="text/css" href="common.css" />
+  </head>
+
+  <body>
+    <header class="header-container">
+      <h1>Form Data</h1>
+    </header>
+    <div class="table-container">
+      
+      <div class="table">
+        <div class="table-row">
+          <span class="table-cell table-header">Field</span>
+          <span class="table-cell table-header">Value</span>
+        </div>
+        <div class="table-row">
+          <span class="table-cell">Name</span>
+          <span class="table-cell" id="name"></span>
+        </div>
+        <div class="table-row">
+          <span class="table-cell">Email</span>
+          <span class="table-cell" id="email"></span>
+        </div>
+        <div class="table-row">
+          <span class="table-cell">Sex</span>
+          <span class="table-cell" id="sex"></span>
+        </div>
+        <div class="table-row">
+          <span class="table-cell">Age</span>
+          <span class="table-cell" id="age"></span>
+        </div>
+        <div class="table-row">
+          <span class="table-cell">Message</span>
+          <span class="table-cell" id="message"></span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Retrieve form data from local storage and display it
+      document.getElementById("name").textContent =
+        localStorage.getItem("name");
+      document.getElementById("email").textContent =
+        localStorage.getItem("email");
+      document.getElementById("sex").textContent = localStorage.getItem("sex");
+      document.getElementById("age").textContent = localStorage.getItem("age");
+      document.getElementById("message").textContent =
+        localStorage.getItem("message");
+    </script>
+
+    <footer class="footer-container">
+      <p>© 2023 Contact Form. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
